@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd etc/sing-box
 wget https://raw.githubusercontent.com/CRooi/chore/main/config.json
 
 openssl ecparam -genkey -name prime256v1 -out private.key

@@ -20,4 +20,4 @@ sed -i "s/\[INPUT_PASSWORD\]/$password_uuid/g" ./config.json
 sed -i "s/\[INPUT_SHORT_ID\]/$short_id/g" ./config.json
 
 echo "config.json has been updated."
-echo "PublicKey: $public_key"
+echo "$keypair_output"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget https://raw.githubusercontent.com/CRooi/chore/main/config.json
+wget -O config.json https://raw.githubusercontent.com/CRooi/chore/main/config.json
 
 openssl ecparam -genkey -name prime256v1 -out private.key
 openssl req -new -x509 -days 36500 -key private.key -out cert.crt -subj "/CN=www.bing.com"

@@ -60,6 +60,17 @@
                 "certificate_path": "/etc/sing-box/cert.crt",
                 "key_path": "/etc/sing-box/private.key"
             }
+        },
+        {
+            "type": "shadowsocks",
+            "listen": "::",
+            "listen_port": 8080,
+            "network": "tcp",
+            "method": "aes-128-gcm",
+            "password": "[INPUT_SS_PASSWORD]",
+            "multiplex": {
+                "enabled": true
+            }
         }
     ],
     "outbounds": [

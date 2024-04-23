@@ -13,7 +13,7 @@ private_key=$(echo "$keypair_output" | grep 'PrivateKey:' | cut -d ' ' -f 2)
 public_key=$(echo "$keypair_output" | grep 'PublicKey:' | cut -d ' ' -f 2)
 short_id=$(printf '%x\n' $((RANDOM % 256**4)))
 
-ss_password=${sing-box generate rand --base64 16}
+ss_password=$(sing-box generate rand --base64 16)
 
 sed -i "s/\[INPUT_UUID\]/$uuid/g" ./config.json
 sed -i "s/\[INPUT_PRIVATE_KEY\]/$private_key/g" ./config.json

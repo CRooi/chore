@@ -15,7 +15,7 @@
             "sniff": true,
             "sniff_override_destination": true,
             "listen": "::",
-            "listen_port": 2052,
+            "listen_port": 2053,
             "users": [
                 {
                     "uuid": "[INPUT_UUID]",

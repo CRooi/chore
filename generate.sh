@@ -19,7 +19,7 @@ sed -i "s/\[INPUT_UUID\]/$uuid/g" ./config.json
 sed -i "s/\[INPUT_PRIVATE_KEY\]/$private_key/g" ./config.json
 sed -i "s/\[INPUT_PASSWORD\]/$password_uuid/g" ./config.json
 sed -i "s/\[INPUT_SHORT_ID\]/$short_id/g" ./config.json
-sed -i "s/\[INPUT_SS_PASSWORD\]/$password_uuid/g" ./config.json
+sed -i "s/\[INPUT_SS_PASSWORD\]/$ss_password/g" ./config.json
 
 echo "config.json has been updated."
 echo "$keypair_output"

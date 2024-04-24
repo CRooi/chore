@@ -5,6 +5,8 @@ wget -O config.json https://raw.githubusercontent.com/CRooi/chore/main/config.js
 openssl ecparam -genkey -name prime256v1 -out private.key
 openssl req -new -x509 -days 36500 -key private.key -out cert.crt -subj "/CN=www.bing.com"
 
+ip=$(curl ip.sb)
+
 uuid=$(sing-box generate uuid)
 password_uuid=$(sing-box generate uuid)
 
@@ -22,4 +24,22 @@ sed -i "s/\[INPUT_SHORT_ID\]/$short_id/g" ./config.json
 sed -i "s/\[INPUT_SS_PASSWORD\]/$ss_password/g" ./config.json
 
 echo "config.json has been updated."
-echo "$keypair_output"
+
+echo ""
+
+echo "=== IP Address ==="
+echo "$ip"
+
+echo "=== Reality ==="
+echo "PrivateKey: $private_key"
+echo "ShortID: $short_id"
+
+echo ""
+
+echo "=== Hysteria2 ==="
+echo "UUID: $uuid"
+
+echo ""
+
+echo "=== Shadowsocks 2022 ==="
+echo "Password: $ss_password"

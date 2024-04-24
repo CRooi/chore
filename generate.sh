@@ -47,3 +47,9 @@ echo "=== Shadowsocks 2022 ==="
 echo "Password: $ss_password"
 
 echo ""
+
+echo "=== Run ==="
+echo "systemctl start sing-box.service"
+echo "systemctl status sing-box.service"
+
+echo ""

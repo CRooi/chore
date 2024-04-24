@@ -30,6 +30,8 @@ echo ""
 echo "=== IP Address ==="
 echo "$ip"
 
+echo ""
+
 echo "=== Reality ==="
 echo "PrivateKey: $private_key"
 echo "ShortID: $short_id"
@@ -43,3 +45,5 @@ echo ""
 
 echo "=== Shadowsocks 2022 ==="
 echo "Password: $ss_password"
+
+echo ""

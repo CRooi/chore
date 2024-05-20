@@ -13,7 +13,7 @@ password_uuid=$(sing-box generate uuid)
 keypair_output=$(sing-box generate reality-keypair)
 private_key=$(echo "$keypair_output" | grep 'PrivateKey:' | cut -d ' ' -f 2)
 public_key=$(echo "$keypair_output" | grep 'PublicKey:' | cut -d ' ' -f 2)
-short_id=$(printf '%x\n' $((RANDOM % 256**4)))
+short_id=$(sing-box generate rand --hex 8)
 
 ss_password=$(sing-box generate rand --base64 16)
 
@@ -33,6 +33,7 @@ echo "$ip"
 echo ""
 
 echo "=== Reality ==="
+echo "PublicKey: $public_key"
 echo "PrivateKey: $private_key"
 echo "ShortID: $short_id"
 
